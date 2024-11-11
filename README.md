@@ -66,3 +66,9 @@ This project uses the following tools and frameworks:
 * WTForms for managing form input and validation
 * Joblib for saving and loading the machine learning model
 * Scikit-Learn for building and training the model
+
+## Live Demo
+
+The application is deployed on Render. You can access it here:
+
+[Flight Price Prediction App](https://flight-price-prediction-using-flask-1.onrender.com/)
