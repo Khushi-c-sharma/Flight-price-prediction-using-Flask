@@ -1,0 +1,112 @@
+{% extends "layout.html" %} {% block content %}
+<div class="container">
+  <h2 style="text-align: center; margin-bottom: 20px">
+    Please enter the details to predict Flight price
+  </h2>
+  <form action="" method="post" style="text-align: center">
+    {{form.hidden_tag()}}
+    <div>
+      {{ form.airline.label(style="font-weight: bold;") }} {{
+      form.airline(style="padding: 8px;") }} {% if form.airline.errors %} {% for
+      error in form.airline.errors %}
+      <div style="color: red">{{error}}</div>
+      {% endfor %} {% endif %}
+    </div>
+    <br />
+    <div>
+      {{ form.date_of_journey.label(style="font-weight: bold;") }} {{
+      form.date_of_journey(style="padding: 8px;") }} {% if
+      form.date_of_journey.errors %} {% for error in form.date_of_journey.errors
+      %}
+      <div style="color: red">{{error}}</div>
+      {% endfor %} {% endif %}
+    </div>
+    <br />
+    <div>
+      {{ form.source.label(style="font-weight: bold;") }} {{
+      form.source(style="padding: 8px;") }} {% if form.source.errors %} {% for
+      error in form.source.errors %}
+      <div style="color: red">{{error}}</div>
+      {% endfor %} {% endif %}
+    </div>
+    <br />
+    <div>
+      {{ form.destination.label(style="font-weight: bold;") }} {{
+      form.destination(style="padding: 8px;") }} {% if form.destination.errors
+      %} {% for error in form.destination.errors %}
+      <div style="color: red">{{error}}</div>
+      {% endfor %} {% endif %}
+    </div>
+    <br />
+    <div>
+      {{ form.dep_time.label(style="font-weight: bold;") }} {{
+      form.dep_time(style="padding: 8px;") }} {% if form.dep_time.errors %} {%
+      for error in form.dep_time.errors %}
+      <div style="color: red">{{error}}</div>
+      {% endfor %} {% endif %}
+    </div>
+    <br />
+    <div>
+      {{ form.arrival_time.label(style="font-weight: bold;") }} {{
+      form.arrival_time(style="padding: 8px;") }} {% if form.arrival_time.errors
+      %} {% for error in form.arrival_time.errors %}
+      <div style="color: red">{{error}}</div>
+      {% endfor %} {% endif %}
+    </div>
+    <br />
+    <div>
+      {{ form.duration.label(style="font-weight: bold;") }} {{
+      form.duration(style="padding: 8px;") }} {% if form.duration.errors %} {%
+      for error in form.duration.errors %}
+      <div style="color: red">{{error}}</div>
+      {% endfor %} {% endif %}
+    </div>
+    <br />
+    <div>
+      {{ form.total_stops.label(style="font-weight: bold;") }} {{
+      form.total_stops(style="padding: 8px;") }} {% if form.total_stops.errors
+      %} {% for error in form.total_stops.errors %}
+      <div style="color: red">{{error}}</div>
+      {% endfor %} {% endif %}
+    </div>
+    <br />
+    <div>
+      {{ form.additional_info.label(style="font-weight: bold;") }} {{
+      form.additional_info(style="padding: 8px;") }} {% if
+      form.additional_info.errors %} {% for error in form.additional_info.errors
+      %}
+      <div style="color: red">{{error}}</div>
+      {% endfor %} {% endif %}
+    </div>
+    <br />
+    <div style="text-align: center; margin-top: 20px">
+      {{ form.submit(style="padding: 10px 20px; background-color: #4caf50;
+      color: white; border: none; border-radius: 5px; cursor: pointer;") }}
+    </div>
+    <br />
+    <div
+      style="
+        border: 1px solid #141414;
+        padding: 15px;
+        background-color: #111111;
+        border-radius: 5px;
+        text-align: center;
+        font-size: 1.1em;
+        color: mediumspringgreen;
+      "
+    >
+      {{ output }}
+    </div>
+    <br />
+    <div class="text-center">
+      <p>
+        Redirect to homepage?<a
+          href="{{ url_for('home') }}"
+          style="color: #007bff"
+          >Home</a
+        >
+      </p>
+    </div>
+  </form>
+</div>
+{% endblock content %}
